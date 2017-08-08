@@ -65,12 +65,13 @@ libname lib "&path_to_repository.\Datasets";
   	    if not missing(Disease); 
      run;
   %end;
-  data  lib.data2014_2017;
+  data   data2014_2017;
      set l_data2014 l_data2015 l_data2016 l_data2017;
   proc sort ;
      by VAERS_ID YEAR;
   run; 
-  data  lib.vaccine2014_2017;
+  
+  data  vaccine2014_2017;
      set l_vaccine2014 l_vaccine2015 l_vaccine2016 l_vaccine2017;
   proc sort ;
      by VAERS_ID YEAR;
@@ -83,20 +84,102 @@ libname lib "&path_to_repository.\Datasets";
        'One'      = 2 
        'Multiple' = 1;
   run;
-  /*data data2014_2017_AGE;
+  data data2014_2017_AGE;
      set data2014_2017;
      if not missing(DIED) or not missing(L_THREAT) or not missing(ER_VISIT)	or not missing(HOSPITAL) or not missing (HOSPDAYS) then
   	   EMERGENT = "Y";
      else 
        EMERGENT = "N";
-	 EMERGENT_N = input(EMERGENT, yes_no.);*/
+	 EMERGENT_N = input(EMERGENT, yes_no.); 
      /*Age of patient in years calculated by (vax_date - birthdate)*/
-    /* CALCULATED_AGE=ifn(not missing(CAGE_YR),sum(CAGE_YR,CAGE_MO,0),CAGE_MO);
- 	  
-  run;*/
+      CALCULATED_AGE=ifn(not missing(CAGE_YR),sum(CAGE_YR,CAGE_MO,0),CAGE_MO);
+ 	  if 1 < CALCULATED_AGE <= 1.75 or 1<AGE_YRS<=1.75 ;
+  run; 
 %mend read_csv;
 
 
 
 /*read raw data*/
 %read_csv;
+
+%macro keep_VAERS;
+   /* We need to keep only VAERS in all datasets where VACCINE dataset intersects with DATA dataset*/
+   proc sql;
+     create table keep_VAERS as 
+       select distinct a.VAERS_ID, a.YEAR
+      from  data2014_2017_AGE natural inner join vaccine2014_2017 as a;
+   quit;
+
+   data lib.data2014_2017;
+      merge data2014_2017_AGE(in = in1) keep_VAERS(in = in2);
+      by VAERS_ID YEAR;
+      if in1 & in2;
+   run;
+
+   data lib.vaccine2014_2017;
+      merge vaccine2014_2017(in = in1) keep_VAERS(in = in2) lib.data2014_2017(keep = VAERS_ID  YEAR EMERGENT EMERGENT_N);
+      by VAERS_ID YEAR;
+      if in1 & in2;
+   run;
+%mend  keep_VAERS;
+
+/* Keep only needed VAEs*/
+%keep_VAERS;
+
+proc sql FEEDBACK noprint;
+
+   create table VAERS_IDS as
+      select data.* ,  case when .<vac.N_TAKEN_V <=1 then 'One' else 'Multiple' end as TAKEN, 
+             input(calculated TAKEN, ? obs_taken.) as N_TAKEN
+    from lib.vaccine2014_2017  as data
+         natural left join
+         ( select VAERS_ID, YEAR, count( distinct DISEASE) as N_TAKEN_V 
+             from lib.vaccine2014_2017 group by VAERS_ID, YEAR 
+         ) vac ;
+
+
+   create table SE_TAB as        
+    select YEAR, EMERGENT , DISEASE,  
+	       count(distinct case when TAKEN = 'One'  then  VAERS_ID else . end) as ONE label = "ONE ",
+           count(distinct case when TAKEN = 'Multiple' then  VAERS_ID else . end) as MUL label = "MULTIPLE"	 
+	from VAERS_IDS    
+    group by 1,2 ,3 
+    order by 1,2;
+ 
+quit;
+
+proc sql noprint; 
+   select distinct DISEASE into : All_VV separated by '" "' from SE_TAB where ONE>= 5 and MUL>= 5;
+quit;
+data MEET_VAC;
+   set VAERS_IDS (where = (DISEASE in ("&All_VV")));
+run;
+
+data SAMPLE;
+   set MEET_VAC;
+COMMENT - Delete duplicated vaccines for one VAE;
+proc sort dupout = DUP_VAC nodupkey;
+   by DISEASE VAERS_ID;
+proc freq noprint;
+   by DISEASE;
+   table N_TAKEN*EMERGENT_N /chisq relrisk;
+   output out = TESTS chisq RELRISK;
+run;
+ 
+data chisq_odds;
+   set TESTS (keep = DISEASE _PCHI_ P_PCHI _CRAMV_ _RROR_ L_RROR U_RROR);
+   length col1- col5 $100;
+   col1 = strip(DISEASE); col2 = put(round(_PCHI_,.01), 8.2 -c);
+   col3 = put(round(_CRAMV_,.01), 8.2 -c);
+   col4 = put( _RROR_ , ODDSR8.3 -r)||' ('||put( L_RROR , ODDSR8.3 -c)||','||put( U_RROR , ODDSR8.3 -c)||')' ;
+   col5 = put(round(P_PCHI,.01), PVALUE6.4 -l);
+   label col1 = "Vaccines" col2 = 'Chi-Square' col3 = "Cramer's V%sysfunc(byte(178))" col4 = "Odds Ratio%sysfunc(byte(179)) ( 95% CI )" col5 = "p-value%sysfunc(byte(185)) ";
+run;
+title1 "Association between emergent VAERS and number of taken vaccinations.";
+title2 "Populations infants in age 12-23 month.";
+footnote1 "%sysfunc(byte(185))Corresponding p-value for Chi-Square statistic.";
+footnote2 "%sysfunc(byte(178))the strenght measure of the assosiations that the Chi-Square test detected.";
+footnote3 "%sysfunc(byte(179))the odds of emergent vaccination when it was received multiple vaccines to one vaccine.";
+proc print data = chisq_odds  L;
+   var col1-col5;
+run;
