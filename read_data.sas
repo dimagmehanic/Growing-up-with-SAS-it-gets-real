@@ -266,6 +266,6 @@ run;
 
  /*check the result*/
 proc freq data =  keeps ; 
-   table Dise1*TAKEN   /chisq ; 
+   table Dise1*TAKEN   /chisq  ; 
 run;
  
