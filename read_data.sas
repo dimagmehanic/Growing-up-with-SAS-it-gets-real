@@ -241,6 +241,28 @@ quit;
 %mend keeps;
 
 %keeps;
+ /*check the result*/
+proc freq data =  keeps ; 
+   table Dise1*TAKEN   /chisq ; 
+run;
+
+/* Get rid of warning */
+proc sql;
+create table seq as        
+    select Dise1,  
+	       count(distinct case when TAKEN = 'One'  then  VAERS_ID else . end) as ONE label = "ONE ",
+           count(distinct case when TAKEN = 'Multiple' then  VAERS_ID else . end) as MUL label = "MULTIPLE"	 
+	from keeps    
+    group by Dise1  
+    order by Dise1;
+quit;
+proc sql noprint; 
+   select distinct Dise1 into : All_DD separated by '" "' from seq where ONE>= 5 and MUL>= 5;
+quit;
+data keeps;
+   set keeps (where = (Dise1 in ("&All_DD")));
+run; 
+/******************************/
 
  /*check the result*/
 proc freq data =  keeps ; 
