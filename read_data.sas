@@ -176,7 +176,7 @@ data chisq_odds;
    label col1 = "Vaccines" col2 = 'Chi-Square' col3 = "Cramer's V%sysfunc(byte(178))" col4 = "Odds Ratio%sysfunc(byte(179)) ( 95% CI )" col5 = "p-value%sysfunc(byte(185)) ";
 run;
 title1 "Association between emergent VAERS and number of taken vaccinations.";
-title2 "Populations infants in age 12-23 month.";
+title2 "Populations infants in age 12-21 month.";
 footnote1 "%sysfunc(byte(185))Corresponding p-value for Chi-Square statistic.";
 footnote2 "%sysfunc(byte(178))the strenght measure of the assosiations that the Chi-Square test detected.";
 footnote3 "%sysfunc(byte(179))the odds of emergent vaccination when it was received multiple vaccines to one vaccine.";
@@ -186,7 +186,7 @@ run;
 
 
 
-/* Check if combo better then multiple vaccines */
+/* Check if combo better than multiple vaccines */
 
  
 proc sort data =  VAERS_IDS dupout = issue nodupkey;
@@ -244,6 +244,6 @@ quit;
 
  /*check the result*/
 proc freq data =  keeps ; 
-   table Dise1*TAKEN   /chisq; 
+   table Dise1*TAKEN   /chisq ; 
 run;
  
