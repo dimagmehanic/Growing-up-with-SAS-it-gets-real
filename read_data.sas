@@ -1,6 +1,6 @@
 %global path_to_repository;
 %let path_to_repository =  C:\Users\dhasan\Documents\GitHub\Growing-up-with-SAS-it-gets-real ;
-
+option mprint spool nocenter ls = max ps = 25;
 /*Specify where you would like to store the datasets*/
 libname lib "&path_to_repository.\Datasets";
 
