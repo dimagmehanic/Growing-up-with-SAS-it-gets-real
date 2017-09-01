@@ -87,10 +87,10 @@ libname lib "&path_to_repository.\Datasets";
   data data2014_2017_AGE;
      set data2014_2017;
      if not missing(DIED) or not missing(L_THREAT) or not missing(ER_VISIT)	or not missing(HOSPITAL) or not missing (HOSPDAYS) then
-  	   EMERGENT = "Y";
+  	   SEVAE  = "Y";
      else 
-       EMERGENT = "N";
-	 EMERGENT_N = input(EMERGENT, yes_no.); 
+       SEVAE = "N";
+	 SEVAE_N = input(SEVAE, yes_no.); 
      /*Age of patient in years calculated by (vax_date - birthdate)*/
       CALCULATED_AGE=ifn(not missing(CAGE_YR),sum(CAGE_YR,CAGE_MO,0),CAGE_MO);
  	  if 1 < CALCULATED_AGE <= 1.75 or 1<AGE_YRS<=1.75 ;
@@ -117,7 +117,7 @@ libname lib "&path_to_repository.\Datasets";
    run;
 
    data lib.vaccine2014_2017;
-      merge vaccine2014_2017(in = in1) keep_VAERS(in = in2) lib.data2014_2017(keep = VAERS_ID  YEAR EMERGENT EMERGENT_N);
+      merge vaccine2014_2017(in = in1) keep_VAERS(in = in2) lib.data2014_2017(keep = VAERS_ID  YEAR SEVAE SEVAE_N);
       by VAERS_ID YEAR;
       if in1 & in2;
    run;
@@ -139,7 +139,7 @@ proc sql FEEDBACK noprint;
 
 
    create table SE_TAB as        
-    select YEAR, EMERGENT , DISEASE,  
+    select YEAR, SEVAE , DISEASE,  
 	       count(distinct case when TAKEN = 'One'  then  VAERS_ID else . end) as ONE label = "ONE ",
            count(distinct case when TAKEN = 'Multiple' then  VAERS_ID else . end) as MUL label = "MULTIPLE"	 
 	from VAERS_IDS    
@@ -162,7 +162,7 @@ proc sort dupout = DUP_VAC nodupkey;
    by DISEASE VAERS_ID;
 proc freq noprint;
    by DISEASE;
-   table N_TAKEN*EMERGENT_N /chisq relrisk;
+   table N_TAKEN*SEVAE_N /chisq relrisk;
    output out = TESTS chisq RELRISK;
 run;
  
@@ -175,11 +175,11 @@ data chisq_odds;
    col5 = put(round(P_PCHI,.01), PVALUE6.4 -l);
    label col1 = "Vaccines" col2 = 'Chi-Square' col3 = "Cramer's V%sysfunc(byte(178))" col4 = "Odds Ratio%sysfunc(byte(179)) ( 95% CI )" col5 = "p-value%sysfunc(byte(185)) ";
 run;
-title1 "Association between emergent VAERS and number of taken vaccinations.";
+title1 "Association between SEVAE VAERS and number of taken vaccinations.";
 title2 "Populations infants in age 12-21 month.";
 footnote1 "%sysfunc(byte(185))Corresponding p-value for Chi-Square statistic.";
 footnote2 "%sysfunc(byte(178))the strenght measure of the assosiations that the Chi-Square test detected.";
-footnote3 "%sysfunc(byte(179))the odds of emergent vaccination when it was received multiple vaccines to one vaccine.";
+footnote3 "%sysfunc(byte(179))the odds of SEVAE vaccination when it was received multiple vaccines to one vaccine.";
 proc print data = chisq_odds  L;
    var col1-col5;
 run;
@@ -243,7 +243,7 @@ quit;
 %keeps;
  /*check the result*/
 proc freq data =  keeps ; 
-   table Dise1*TAKEN   /chisq ; 
+   table Dise1*TAKEN   /chisq nocol norow nopercent; 
 run;
 
 /* Get rid of warning */
@@ -266,6 +266,6 @@ run;
 
  /*check the result*/
 proc freq data =  keeps ; 
-   table Dise1*TAKEN   /chisq  ; 
+   table Dise1*TAKEN   /chisq  nocol norow nopercent ; 
 run;
  

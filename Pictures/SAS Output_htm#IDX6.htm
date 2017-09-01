@@ -1,0 +1,1297 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><META content="IE=5.0000" http-equiv="X-UA-Compatible">
+<TITLE>SAS Output</TITLE>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001">
+<META content="text/html; charset=windows-1252" http-equiv=Content-type>
+<STYLE type=text/css>.aftercaption {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; PADDING-TOP: 4pt; BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.batch {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 1px solid; FONT-FAMILY: 'SAS Monospace', 'Courier New', Courier, monospace; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-COLLAPSE: separate; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; COLOR: #000000; PADDING-BOTTOM: 7px; FONT-STYLE: normal; PADDING-TOP: 7px; PADDING-LEFT: 7px; BORDER-SPACING: 1px; BORDER-LEFT: #c1c1c1 1px solid; PADDING-RIGHT: 7px; BACKGROUND-COLOR: #fafbfe
+}
+.beforecaption {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.body {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 8px; BACKGROUND-COLOR: #fafbfe; MARGIN-RIGHT: 8px
+}
+.bodydate {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; WIDTH: 100%; VERTICAL-ALIGN: top; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; TEXT-ALIGN: right; BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.bycontentfolder {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 6pt
+}
+.byline {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.bylinecontainer {
+	FONT-SIZE: x-small; BORDER-TOP: #000000 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #000000 0px solid; WIDTH: 100%; BORDER-BOTTOM: #000000 0px solid; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BORDER-SPACING: 1px; BORDER-LEFT: #000000 0px solid; BACKGROUND-COLOR: #fafbfe
+}
+.caption {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.cell {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.container {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.contentfolder {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 6pt
+}
+.contentitem {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 6pt
+}
+.contentproclabel {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.contentprocname {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.contents {
+	LIST-STYLE-TYPE: decimal; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 8px; BACKGROUND-COLOR: #fafbfe; MARGIN-RIGHT: 8px
+}
+.contentsdate {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; WIDTH: 100%; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.contenttitle {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: italic; BACKGROUND-COLOR: #fafbfe
+}
+.continued {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; WIDTH: 100%; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.data {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.dataemphasis {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.dataemphasisfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; FONT-STYLE: italic; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.dataempty {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.datafixed {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: 'Courier New', Courier; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.datastrong {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: bold; COLOR: #000000; FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.datastrongfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: bold; COLOR: #000000; FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.date {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; WIDTH: 100%; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.document {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+A:link {
+	COLOR: #0000ff
+}
+A:visited {
+	COLOR: #800080
+}
+A:active {
+	COLOR: #800080
+}
+.errorbanner {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.errorcontent {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.errorcontentfixed {
+	FONT-SIZE: x-small; FONT-FAMILY: 'Courier New', Courier; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.extendedpage {
+	FONT-SIZE: x-small; BORDER-TOP: #000000 1pt solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #000000 1pt solid; BORDER-BOTTOM: #000000 1pt solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: italic; TEXT-ALIGN: center; BORDER-LEFT: #000000 1pt solid; BACKGROUND-COLOR: #fafbfe
+}
+.fatalbanner {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.fatalcontent {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.fatalcontentfixed {
+	FONT-SIZE: x-small; FONT-FAMILY: 'Courier New', Courier; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.folderaction {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 6pt
+}
+.footer {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.footeremphasis {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.footeremphasisfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.footerempty {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.footerfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.footerstrong {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.footerstrongfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.frame {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.graph {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 1px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-COLLAPSE: separate; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BORDER-SPACING: 1px; BORDER-LEFT: #c1c1c1 1px solid; BACKGROUND-COLOR: #fafbfe
+}
+.header {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.headeremphasis {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #d8dbd3
+}
+.headeremphasisfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #d8dbd3
+}
+.headerempty {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.headerfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.headersandfooters {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #edf2f9
+}
+.headerstrong {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #000000; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #d8dbd3
+}
+.headerstrongfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #000000; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #d8dbd3
+}
+.index {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.indexaction {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 6pt
+}
+.indexitem {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 6pt
+}
+.indexprocname {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.indextitle {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: italic; BACKGROUND-COLOR: #fafbfe
+}
+.layoutcontainer {
+	BORDER-TOP: #000000 0px solid; BORDER-RIGHT: #000000 0px solid; BORDER-BOTTOM: #000000 0px solid; BORDER-SPACING: 30px; BORDER-LEFT: #000000 0px solid
+}
+.layoutregion {
+	BORDER-TOP: #000000 0px solid; BORDER-RIGHT: #000000 0px solid; BORDER-BOTTOM: #000000 0px solid; BORDER-SPACING: 30px; BORDER-LEFT: #000000 0px solid
+}
+.linecontent {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #fafbfe
+}
+.list {
+	LIST-STYLE-TYPE: disc; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list10 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list2 {
+	LIST-STYLE-TYPE: circle; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list3 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list4 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list5 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list6 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list7 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list8 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list9 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem {
+	LIST-STYLE-TYPE: disc; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem10 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem2 {
+	LIST-STYLE-TYPE: circle; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem3 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem4 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem5 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem6 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem7 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem8 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem9 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.note {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.notebanner {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.notecontent {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.notecontentfixed {
+	FONT-SIZE: x-small; FONT-FAMILY: 'Courier New', Courier; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.output {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 1px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-COLLAPSE: separate; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BORDER-SPACING: 1px; BORDER-LEFT: #c1c1c1 1px solid; BACKGROUND-COLOR: #fafbfe
+}
+.pageno {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; VERTICAL-ALIGN: top; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; TEXT-ALIGN: right; BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.pages {
+	LIST-STYLE-TYPE: decimal; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 8px; BACKGROUND-COLOR: #fafbfe; MARGIN-RIGHT: 8px
+}
+.pagesdate {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; WIDTH: 100%; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.pagesitem {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 6pt
+}
+.pagesproclabel {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.pagesprocname {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.pagestitle {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: italic; BACKGROUND-COLOR: #fafbfe
+}
+.paragraph {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.parskip {
+	FONT-SIZE: x-small; BORDER-TOP: #000000 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #000000 0px solid; BORDER-BOTTOM: #000000 0px solid; FONT-WEIGHT: bold; FONT-STYLE: normal; BORDER-SPACING: 0px; BORDER-LEFT: #000000 0px solid
+}
+.prepage {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; TEXT-ALIGN: left; BACKGROUND-COLOR: #fafbfe
+}
+.proctitle {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.proctitlefixed {
+	FONT-SIZE: x-small; FONT-FAMILY: 'Courier New', Courier, monospace; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.rowfooter {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowfooteremphasis {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowfooteremphasisfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowfooterempty {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowfooterfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowfooterstrong {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowfooterstrongfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheader {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheaderemphasis {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheaderemphasisfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheaderempty {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheaderfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheaderstrong {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheaderstrongfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.systemfooter {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter10 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter2 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter3 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter4 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter5 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter6 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter7 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter8 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter9 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle10 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle2 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle3 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle4 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle5 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle6 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle7 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle8 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle9 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systitleandfootercontainer {
+	FONT-SIZE: x-small; BORDER-TOP: #000000 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #000000 0px solid; WIDTH: 100%; BORDER-BOTTOM: #000000 0px solid; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BORDER-SPACING: 1px; BORDER-LEFT: #000000 0px solid; BACKGROUND-COLOR: #fafbfe
+}
+.table {
+	BORDER-TOP: #c1c1c1 1px solid; BORDER-RIGHT: #c1c1c1 0px solid; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: #c1c1c1 0px solid; BORDER-SPACING: 0px; BORDER-LEFT: #c1c1c1 1px solid
+}
+.top_stacked_value {
+	BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-BOTTOM: 1px; BORDER-LEFT: 0px
+}
+.middle_stacked_value {
+	BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-LEFT: 0px
+}
+.bottom_stacked_value {
+	BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-TOP: 1px; BORDER-LEFT: 0px
+}
+.titleandnotecontainer {
+	FONT-SIZE: x-small; BORDER-TOP: #000000 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #000000 0px solid; WIDTH: 100%; BORDER-BOTTOM: #000000 0px solid; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BORDER-SPACING: 1px; BORDER-LEFT: #000000 0px solid; BACKGROUND-COLOR: #fafbfe
+}
+.titlesandfooters {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.usertext {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.warnbanner {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.warncontent {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.warncontentfixed {
+	FONT-SIZE: x-small; FONT-FAMILY: 'Courier New', Courier; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.l {
+	TEXT-ALIGN: left
+}
+.c {
+	TEXT-ALIGN: center
+}
+.r {
+	TEXT-ALIGN: right
+}
+.d {
+	TEXT-ALIGN: right
+}
+.j {
+	TEXT-ALIGN: justify
+}
+.t {
+	VERTICAL-ALIGN: top
+}
+.m {
+	VERTICAL-ALIGN: middle
+}
+.b {
+	VERTICAL-ALIGN: bottom
+}
+TD {
+	VERTICAL-ALIGN: top
+}
+TH {
+	VERTICAL-ALIGN: top
+}
+.stacked_cell {
+	PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px
+}
+</STYLE>
+
+<SCRIPT language=javascript type=text/javascript>
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+<BODY class=body onload=startup() onunload=shutdown()>
+<SCRIPT language=javascript type=text/javascript>
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</SCRIPT>
+
+<DIV class=branch><A name=IDX></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="l systemtitle">Association between emergent VAERS and number of 
+      taken vaccinations.</TD></TR>
+  <TR>
+    <TD class="l systemtitle2">Populations infants in age 12-21 
+  month.</TD></TR></TBODY></TABLE><BR>
+<DIV>
+<DIV align=left>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Print: Data Set WORK.CHISQ_ODDS" frame=box>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="r header" scope=col>Obs</TH>
+    <TH class="l header" scope=col>Vaccines</TH>
+    <TH class="l header" scope=col>Chi-Square</TH>
+    <TH class="l header" scope=col>Cramer's V²</TH>
+    <TH class="l header" scope=col>Odds Ratio³ ( 95% CI )</TH>
+    <TH class="l header" scope=col>p-value¹</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="r rowheader" scope=row>1</TH>
+    <TD class="l data">Chickenpox</TD>
+    <TD class="l data">61.70</TD>
+    <TD class="l data">0.24</TD>
+    <TD class="l data">4.260 ( 2.905 , 6.248 )</TD>
+    <TD class="l data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>2</TH>
+    <TD class="l data">Chickenpox,Measles,Mumps,Rubella</TD>
+    <TD class="l data">0.88</TD>
+    <TD class="l data">0.06</TD>
+    <TD class="l data">1.324 ( 0.735 , 2.385 )</TD>
+    <TD class="l data">0.3500</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>3</TH>
+    <TD class="l data">Diphtheria,Haemophilus b,Pertussis,Polio,Tetanus</TD>
+    <TD class="l data">0.44</TD>
+    <TD class="l data">0.09</TD>
+    <TD class="l data">1.530 ( 0.434 , 5.401 )</TD>
+    <TD class="l data">0.5100</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>4</TH>
+    <TD class="l data">Diphtheria,Hepatitis B,Pertussis,Polio,Tetanus</TD>
+    <TD class="l data">2.43</TD>
+    <TD class="l data">0.16</TD>
+    <TD class="l data">2.799 ( 0.737 , 10.626 )</TD>
+    <TD class="l data">0.1200</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>5</TH>
+    <TD class="l data">Diphtheria,Pertussis,Polio,Tetanus</TD>
+    <TD class="l data">12.39</TD>
+    <TD class="l data">0.26</TD>
+    <TD class="l data">4.370 ( 1.835 , 10.407 )</TD>
+    <TD class="l data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>6</TH>
+    <TD class="l data">Diphtheria,Pertussis,Tetanus</TD>
+    <TD class="l data">10.94</TD>
+    <TD class="l data">0.12</TD>
+    <TD class="l data">1.909 ( 1.296 , 2.812 )</TD>
+    <TD class="l data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>7</TH>
+    <TD class="l data">Haemophilus b</TD>
+    <TD class="l data">57.97</TD>
+    <TD class="l data">0.27</TD>
+    <TD class="l data">13.428 ( 5.793 , 31.124 )</TD>
+    <TD class="l data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>8</TH>
+    <TD class="l data">Hepatitis A</TD>
+    <TD class="l data">6.45</TD>
+    <TD class="l data">0.09</TD>
+    <TD class="l data">1.693 ( 1.124 , 2.550 )</TD>
+    <TD class="l data">0.0100</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>9</TH>
+    <TD class="l data">Hepatitis B</TD>
+    <TD class="l data">4.44</TD>
+    <TD class="l data">0.24</TD>
+    <TD class="l data">4.833 ( 1.001 , 23.344 )</TD>
+    <TD class="l data">0.0400</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>10</TH>
+    <TD class="l data">Influenza</TD>
+    <TD class="l data">22.61</TD>
+    <TD class="l data">0.21</TD>
+    <TD class="l data">2.871 ( 1.840 , 4.482 )</TD>
+    <TD class="l data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>11</TH>
+    <TD class="l data">Measles,Mumps,Rubella</TD>
+    <TD class="l data">15.53</TD>
+    <TD class="l data">0.12</TD>
+    <TD class="l data">1.873 ( 1.367 , 2.567 )</TD>
+    <TD class="l data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>12</TH>
+    <TD class="l data">Pneumococcal</TD>
+    <TD class="l data">11.41</TD>
+    <TD class="l data">0.12</TD>
+    <TD class="l data">2.511 ( 1.449 , 4.350 )</TD>
+    <TD class="l data">&lt;.0001</TD></TR></TBODY></TABLE></DIV></DIV><BR>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="l systemfooter">¹Corresponding p-value for Chi-Square 
+    statistic.</TD></TR>
+  <TR>
+    <TD class="l systemfooter2">²the strenght measure of the assosiations that 
+      the Chi-Square test detected.</TD></TR>
+  <TR>
+    <TD class="l systemfooter3">³the odds of emergent vaccination when it was 
+      received multiple vaccines to one vaccine.</TD></TR></TBODY></TABLE><BR></DIV>
+<DIV class=branch>
+<P style="PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3>
+<A name=IDX1></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="l systemtitle">Association between emergent VAERS and number of 
+      taken vaccinations.</TD></TR>
+  <TR>
+    <TD class="l systemtitle2">Populations infants in age 12-21 
+  month.</TD></TR></TBODY></TABLE><BR>
+<DIV>
+<DIV align=left>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure SQL: Query Results" frame=box>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="l b header" scope=col>Dise</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TD class="l data">Chickenpox,Measles,Mumps,Rubella</TD></TR>
+  <TR>
+    <TD class="l data">Diphtheria,Haemophilus b,Pertussis,Polio,Tetanus</TD></TR>
+  <TR>
+    <TD class="l data">Diphtheria,Haemophilus b,Pertussis,Tetanus</TD></TR>
+  <TR>
+    <TD class="l data">Diphtheria,Hepatitis B,Pertussis,Polio,Tetanus</TD></TR>
+  <TR>
+    <TD class="l data">Diphtheria,Pertussis,Polio,Tetanus</TD></TR>
+  <TR>
+    <TD class="l data">Diphtheria,Pertussis,Tetanus</TD></TR>
+  <TR>
+    <TD class="l data">Diphtheria,Tetanus</TD></TR>
+  <TR>
+    <TD class="l data">Haemophilus b,Hepatitis B</TD></TR>
+  <TR>
+    <TD 
+class="l data">Measles,Mumps,Rubella</TD></TR></TBODY></TABLE></DIV></DIV><BR>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="l systemfooter">¹Corresponding p-value for Chi-Square 
+    statistic.</TD></TR>
+  <TR>
+    <TD class="l systemfooter2">²the strenght measure of the assosiations that 
+      the Chi-Square test detected.</TD></TR>
+  <TR>
+    <TD class="l systemfooter3">³the odds of emergent vaccination when it was 
+      received multiple vaccines to one vaccine.</TD></TR></TBODY></TABLE><BR>
+<P style="PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3>
+<A name=IDX2></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="l systemtitle">Association between emergent VAERS and number of 
+      taken vaccinations.</TD></TR>
+  <TR>
+    <TD class="l systemtitle2">Populations infants in age 12-21 
+  month.</TD></TR></TBODY></TABLE><BR>
+<DIV>
+<DIV align=left>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure SQL: Query Results" frame=box>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="r b header" scope=col>&nbsp;</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TD class="r data">9</TD></TR></TBODY></TABLE></DIV></DIV><BR>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="l systemfooter">¹Corresponding p-value for Chi-Square 
+    statistic.</TD></TR>
+  <TR>
+    <TD class="l systemfooter2">²the strenght measure of the assosiations that 
+      the Chi-Square test detected.</TD></TR>
+  <TR>
+    <TD class="l systemfooter3">³the odds of emergent vaccination when it was 
+      received multiple vaccines to one vaccine.</TD></TR></TBODY></TABLE><BR></DIV>
+<DIV class=branch>
+<P style="PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3>
+<A name=IDX3></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="l systemtitle">Association between emergent VAERS and number of 
+      taken vaccinations.</TD></TR>
+  <TR>
+    <TD class="l systemtitle2">Populations infants in age 12-21 
+  month.</TD></TR></TBODY></TABLE><BR>
+<DIV class="l proctitle">The FREQ Procedure</DIV>
+<P>
+<DIV>
+<DIV align=left>
+<TABLE summary="Page Layout">
+  <TBODY>
+  <TR>
+    <TD class="l t">
+      <DIV align=left>
+      <TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 
+      rules=all summary="Procedure Freq: Cross-Tabular Freq Table" frame=box>
+        <COLGROUP>
+        <COL></COLGROUP>
+        <COLGROUP></COLGROUP>
+        <TBODY>
+        <TR>
+          <TH class="l t stacked_cell header" scope=col>
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TH class="l t header top_stacked_value" 
+              scope=col>Frequency</TH></TR></TBODY></TABLE></TH></TR></TBODY></TABLE></DIV></TD>
+    <TD>
+      <DIV align=left>
+      <TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 
+      rules=all summary="Procedure Freq: Cross-Tabular Freq Table" frame=box>
+        <COLGROUP>
+        <COL></COLGROUP>
+        <COLGROUP>
+        <COL>
+        <COL>
+        <COL></COLGROUP>
+        <THEAD>
+        <TR>
+          <TH class="c header" colSpan=4 
+            scope=colgroup>Table&nbsp;of&nbsp;Dise1&nbsp;by&nbsp;TAKEN</TH></TR>
+        <TR>
+          <TH class="c b header" rowSpan=2 scope=col>Dise1</TH>
+          <TH class="c b header" colSpan=3 scope=colgroup>TAKEN</TH></TR>
+        <TR>
+          <TH class="r header" scope=col>Multiple</TH>
+          <TH class="r header" scope=col>One</TH>
+          <TH class="r header" scope=col>Total</TH></TR></THEAD>
+        <TBODY>
+        <TR>
+          <TH class="l t rowheader" scope=row>Chickenpox,Measles,Mumps,Rubella 
+          </TH>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">161</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">69</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">230</TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TH class="l t rowheader" scope=row>Diphtheria,Haemophilus 
+            b,Pertussis,Polio,Tetanus </TH>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+class="r t data top_stacked_value">6</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">13</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">19</TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TH class="l t rowheader" scope=row>Diphtheria,Haemophilus 
+            b,Pertussis,Tetanus </TH>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">71</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+class="r t data top_stacked_value">7</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">78</TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TH class="l t rowheader" scope=row>Diphtheria,Hepatitis 
+            B,Pertussis,Polio,Tetanus </TH>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+class="r t data top_stacked_value">3</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">16</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">19</TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TH class="l t rowheader" 
+            scope=row>Diphtheria,Pertussis,Polio,Tetanus </TH>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+class="r t data top_stacked_value">9</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">49</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">58</TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TH class="l t rowheader" scope=row>Diphtheria,Pertussis,Tetanus </TH>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+class="r t data top_stacked_value">0</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">143</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">143</TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TH class="l t rowheader" scope=row>Diphtheria,Tetanus </TH>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+class="r t data top_stacked_value">0</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+class="r t data top_stacked_value">1</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+        class="r t data top_stacked_value">1</TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TH class="l t rowheader" scope=row>Haemophilus b,Hepatitis B </TH>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+class="r t data top_stacked_value">0</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+class="r t data top_stacked_value">1</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+        class="r t data top_stacked_value">1</TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TH class="l t rowheader" scope=row>Measles,Mumps,Rubella </TH>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+class="r t data top_stacked_value">0</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">225</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">225</TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TH class="l t rowheader" scope=row>Total </TH>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">250</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">524</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">774</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></DIV></DIV><BR><BR>
+<P>
+<DIV align=left>
+<TABLE class=proctitle>
+  <TBODY>
+  <TR>
+    <TD class="l proctitle">Statistics for Table of Dise1 by 
+  TAKEN</TD></TR></TBODY></TABLE></DIV>
+<P><A name=IDX4></A>
+<DIV>
+<DIV align=left>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Freq: Chi-Square Tests" frame=box>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="l b header" scope=col>Statistic</TH>
+    <TH class="r b header" scope=col>DF</TH>
+    <TH class="r b header" scope=col>Value</TH>
+    <TH class="r b header" scope=col>Prob</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Chi-Square</TH>
+    <TD class="r data">8</TD>
+    <TD class="r data">458.8823</TD>
+    <TD class="r data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Likelihood Ratio Chi-Square</TH>
+    <TD class="r data">8</TD>
+    <TD class="r data">555.4226</TD>
+    <TD class="r data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Mantel-Haenszel Chi-Square</TH>
+    <TD class="r data">1</TD>
+    <TD class="r data">344.7632</TD>
+    <TD class="r data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Phi Coefficient</TH>
+    <TD class="r data">&nbsp;</TD>
+    <TD class="r data">0.7700</TD>
+    <TD class="r data">&nbsp;</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Contingency Coefficient</TH>
+    <TD class="r data">&nbsp;</TD>
+    <TD class="r data">0.6101</TD>
+    <TD class="r data">&nbsp;</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Cramer's V</TH>
+    <TD class="r data">&nbsp;</TD>
+    <TD class="r data">0.7700</TD>
+    <TD class="r data">&nbsp;</TD></TR></TBODY>
+  <TFOOT>
+  <TR>
+    <TH class="c b footer" colSpan=4>WARNING: 22% of the cells have expected 
+      counts less <BR>than 5. Chi-Square may not be a valid 
+test.</TH></TR></TFOOT></TABLE></DIV></DIV><BR><BR>
+<P>
+<DIV align=left>
+<TABLE class=proctitle>
+  <TBODY>
+  <TR>
+    <TD class="l proctitle">Sample Size = 774</TD></TR></TBODY></TABLE></DIV>
+<P>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="l systemfooter">¹Corresponding p-value for Chi-Square 
+    statistic.</TD></TR>
+  <TR>
+    <TD class="l systemfooter2">²the strenght measure of the assosiations that 
+      the Chi-Square test detected.</TD></TR>
+  <TR>
+    <TD class="l systemfooter3">³the odds of emergent vaccination when it was 
+      received multiple vaccines to one 
+vaccine.</TD></TR></TBODY></TABLE><BR></P></DIV>
+<DIV class=branch>
+<P style="PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3>
+<A name=IDX5></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="l systemtitle">Association between emergent VAERS and number of 
+      taken vaccinations.</TD></TR>
+  <TR>
+    <TD class="l systemtitle2">Populations infants in age 12-21 
+  month.</TD></TR></TBODY></TABLE><BR>
+<DIV class="l proctitle">The FREQ Procedure</DIV>
+<P>
+<DIV>
+<DIV align=left>
+<TABLE summary="Page Layout">
+  <TBODY>
+  <TR>
+    <TD class="l t">
+      <DIV align=left>
+      <TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 
+      rules=all summary="Procedure Freq: Cross-Tabular Freq Table" frame=box>
+        <COLGROUP>
+        <COL></COLGROUP>
+        <COLGROUP></COLGROUP>
+        <TBODY>
+        <TR>
+          <TH class="l t stacked_cell header" scope=col>
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TH class="l t header top_stacked_value" 
+              scope=col>Frequency</TH></TR></TBODY></TABLE></TH></TR></TBODY></TABLE></DIV></TD>
+    <TD>
+      <DIV align=left>
+      <TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 
+      rules=all summary="Procedure Freq: Cross-Tabular Freq Table" frame=box>
+        <COLGROUP>
+        <COL></COLGROUP>
+        <COLGROUP>
+        <COL>
+        <COL>
+        <COL></COLGROUP>
+        <THEAD>
+        <TR>
+          <TH class="c header" colSpan=4 
+            scope=colgroup>Table&nbsp;of&nbsp;Dise1&nbsp;by&nbsp;TAKEN</TH></TR>
+        <TR>
+          <TH class="c b header" rowSpan=2 scope=col>Dise1</TH>
+          <TH class="c b header" colSpan=3 scope=colgroup>TAKEN</TH></TR>
+        <TR>
+          <TH class="r header" scope=col>Multiple</TH>
+          <TH class="r header" scope=col>One</TH>
+          <TH class="r header" scope=col>Total</TH></TR></THEAD>
+        <TBODY>
+        <TR>
+          <TH class="l t rowheader" scope=row>Chickenpox,Measles,Mumps,Rubella 
+          </TH>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">161</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">69</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">230</TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TH class="l t rowheader" scope=row>Diphtheria,Haemophilus 
+            b,Pertussis,Polio,Tetanus </TH>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+class="r t data top_stacked_value">6</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">13</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">19</TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TH class="l t rowheader" scope=row>Diphtheria,Haemophilus 
+            b,Pertussis,Tetanus </TH>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">71</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+class="r t data top_stacked_value">7</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">78</TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TH class="l t rowheader" 
+            scope=row>Diphtheria,Pertussis,Polio,Tetanus </TH>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+class="r t data top_stacked_value">9</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">49</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">58</TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TH class="l t rowheader" scope=row>Total </TH>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">247</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">138</TD></TR></TBODY></TABLE></TD>
+          <TD class="r t stacked_cell data">
+            <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+          class="r t data top_stacked_value">385</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></DIV></DIV><BR><BR>
+<P>
+<DIV align=left>
+<TABLE class=proctitle>
+  <TBODY>
+  <TR>
+    <TD class="l proctitle">Statistics for Table of Dise1 by 
+  TAKEN</TD></TR></TBODY></TABLE></DIV>
+<P><A name=IDX6></A>
+<DIV>
+<DIV align=left>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Freq: Chi-Square Tests" frame=box>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="l b header" scope=col>Statistic</TH>
+    <TH class="r b header" scope=col>DF</TH>
+    <TH class="r b header" scope=col>Value</TH>
+    <TH class="r b header" scope=col>Prob</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Chi-Square</TH>
+    <TD class="r data">3</TD>
+    <TD class="r data">96.3404</TD>
+    <TD class="r data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Likelihood Ratio Chi-Square</TH>
+    <TD class="r data">3</TD>
+    <TD class="r data">100.5748</TD>
+    <TD class="r data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Mantel-Haenszel Chi-Square</TH>
+    <TD class="r data">1</TD>
+    <TD class="r data">19.3297</TD>
+    <TD class="r data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Phi Coefficient</TH>
+    <TD class="r data">&nbsp;</TD>
+    <TD class="r data">0.5002</TD>
+    <TD class="r data">&nbsp;</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Contingency Coefficient</TH>
+    <TD class="r data">&nbsp;</TD>
+    <TD class="r data">0.4474</TD>
+    <TD class="r data">&nbsp;</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Cramer's V</TH>
+    <TD class="r data">&nbsp;</TD>
+    <TD class="r data">0.5002</TD>
+    <TD class="r data">&nbsp;</TD></TR></TBODY></TABLE></DIV></DIV><BR><BR>
+<P>
+<DIV align=left>
+<TABLE class=proctitle>
+  <TBODY>
+  <TR>
+    <TD class="l proctitle">Sample Size = 385</TD></TR></TBODY></TABLE></DIV>
+<P>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="l systemfooter">¹Corresponding p-value for Chi-Square 
+    statistic.</TD></TR>
+  <TR>
+    <TD class="l systemfooter2">²the strenght measure of the assosiations that 
+      the Chi-Square test detected.</TD></TR>
+  <TR>
+    <TD class="l systemfooter3">³the odds of emergent vaccination when it was 
+      received multiple vaccines to one 
+vaccine.</TD></TR></TBODY></TABLE><BR></P></DIV></BODY></HTML>
