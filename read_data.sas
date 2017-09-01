@@ -176,7 +176,7 @@ data chisq_odds;
    label col1 = "Vaccines" col2 = 'Chi-Square' col3 = "Cramer's V%sysfunc(byte(178))" col4 = "Odds Ratio%sysfunc(byte(179)) ( 95% CI )" col5 = "p-value%sysfunc(byte(185)) ";
 run;
 title1 "Association between serious VAEs and number of taken vaccinations.";
-title2 "Populations infants in age 12-21 month.";
+title2 "Population: Infants aged 12-21 months.";
 footnote1 "%sysfunc(byte(185))Corresponding p-value for Chi-Square statistic.";
 footnote2 "%sysfunc(byte(178))the strenght measure of the assosiations that the Chi-Square test detected.";
 footnote3 "%sysfunc(byte(179))the odds of SEVAE vaccination when it was received multiple vaccines to one vaccine.";
